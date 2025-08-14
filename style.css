@@ -126,10 +126,10 @@ nav {
     color: var(--text-medium);
 }
 
-.hero-image-container {
+.hero-code {
     flex: 1;
     min-height: 400px;
-    background-image: url("url-da-nova-imagem.png"); /* Substitua por este texto */
+    background-image: url("hero-background-code.png"); /* Substitua por este texto */
     background-size: cover;
     background-position: center;
     position: relative;
