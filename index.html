@@ -3,135 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>two-jhey - Descomplicando a Automação no WhatsApp</title>
+    <title>two-jhey - Blog sobre Automação no WhatsApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS BÁSICO E RESET */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* HEADER E NAVEGAÇÃO */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            color: #555;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #000;
+        }
+        .cta-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #128C7E;
+        }
+
+        /* CORPO PRINCIPAL - BLOG */
+        main {
+            padding: 40px 0;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .blog-header h1 {
+            font-size: 42px;
+            color: #1c1e21;
+            margin: 0;
+        }
+
+        /* LISTA DE POSTS */
+        .post-list .post-item {
+            background-color: #fff;
+            padding: 30px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .post-list .post-item:last-child {
+            border-bottom: none;
+        }
+        .post-date {
+            font-size: 14px;
+            color: #888;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+        .post-title {
+            margin: 0 0 15px 0;
+        }
+        .post-title a {
+            font-size: 28px;
+            color: #111;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        .post-title a:hover {
+            text-decoration: underline;
+        }
+        .post-excerpt {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0 0 20px 0;
+        }
+        .read-more {
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* SEÇÃO DE CONTATO */
+        #contact {
+            background-color: #ece5dd;
+            padding: 60px 0;
+            text-align: center;
+        }
+        #contact h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        #contact p {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+        }
+        .whatsapp-button img {
+            height: 24px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f0f0f0;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <nav class="container">
-            <a href="#" class="logo">
+        <div class="container">
+            <a href="index.html" class="logo">
                 <img src="logo.png" alt="Logo two-jhey">
             </a>
             <ul class="nav-links">
-                <li><a href="#benefits">Benefícios</a></li>
-                <li><a href="#insights">Blog</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="ajuda.html">Central de Ajuda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="para-empresas.html">Para empresas</a></li>
+                <li><a href="apps.html">Apps</a></li>
             </ul>
-            <a href="https://wa.me/551151880952" target="_blank" class="cta-button nav-cta">Fale com um Especialista</a>
-        </nav>
+            <a href="#" class="cta-button">Baixar</a>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>A tecnologia trabalhando por você, de um jeito simples.</h1>
-                    <p>Descubra como a automação no WhatsApp pode liberar seu tempo, organizar seu atendimento e aproximar você dos seus clientes, sem precisar ser um expert em tecnologia.</p>
-                    <a href="https://wa.me/551151880952" target="_blank" class="cta-button">Quero Saber Mais</a>
-                </div>
-                <div class="hero-code">
-                    </div>
+        <div class="container">
+            <div class="blog-header">
+                <h1>Blog da two-jhey</h1>
             </div>
-        </section>
 
-        <section id="benefits">
-            <div class="container">
-                <h2>O que a automação faz pelo seu negócio?</h2>
-                <p class="section-subtitle">Pequenas mudanças que geram resultados gigantes no seu dia a dia.</p>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon-container">
-                            <img src="feature-icon-1.png" alt="Ícone de equipe unida" class="feature-icon">
-                        </div>
-                        <h3>Sua Equipe Unida, Onde Estiver</h3>
-                        <p>Imagine toda a sua equipe conversando com clientes através de um único número de WhatsApp. Chega de confusão e respostas perdidas.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon-container">
-                            <img src="feature-icon-2.png" alt="Ícone de automação 24/7" class="feature-icon">
-                        </div>
-                        <h3>Atendimento que Não Dorme</h3>
-                        <p>Responda às dúvidas mais comuns dos seus clientes na hora, a qualquer dia da semana. Um assistente virtual que trabalha por você 24/7.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon-container">
-                            <img src="feature-icon-3.png" alt="Ícone de insights" class="feature-icon">
-                        </div>
-                        <h3>Entenda Seus Clientes</h3>
-                        <p>Saiba o que seus clientes mais perguntam e como sua equipe está atendendo. Informações claras para você tomar as melhores decisões.</p>
-                    </div>
-                </div>
+            <div class="post-list">
+                <article class="post-item">
+                    <p class="post-date">August 14, 2025</p>
+                    <h2 class="post-title"><a href="#">Ligações no WhatsApp: novos jeitos de planejar e participar</a></h2>
+                    <p class="post-excerpt">Estamos anunciando novos recursos no WhatsApp que farão as ligações em grupo serem mais fáceis de planejar e mais interativas.</p>
+                    <a href="#" class="read-more">Saiba mais →</a>
+                </article>
+
+                <article class="post-item">
+                    <p class="post-date">June 25, 2025</p>
+                    <h2 class="post-title"><a href="#">Resumos de conversas com IA para você não perder nada</a></h2>
+                    <p class="post-excerpt">Conheça os Resumos de Mensagens, uma nova opção que usa IA para resumir de forma privada e rápida as mensagens não lidas em uma conversa.</p>
+                    <a href="#" class="read-more">Saiba mais →</a>
+                </article>
+
+                <article class="post-item">
+                    <p class="post-date">June 16, 2025</p>
+                    <h2 class="post-title"><a href="#">Ajudamos você a encontrar mais canais e empresas no WhatsApp</a></h2>
+                    <p class="post-excerpt">Estamos lançando hoje novos recursos para a aba Atualizações, onde você encontra os canais e o status de forma mais intuitiva.</p>
+                    <a href="#" class="read-more">Saiba mais →</a>
+                </article>
+
+                <article class="post-item">
+                    <p class="post-date">June 12, 2025</p>
+                    <h2 class="post-title"><a href="#">Resumo dos novos recursos: atualizações nas figurinhas, ligações e mais</a></h2>
+                    <p class="post-excerpt">Confira este resumo de alguns dos novos recursos, ferramentas e configurações que podem ter passado despercebidos por você nas abas Conversas, Ligações e Atualizações.</p>
+                    <a href="#" class="read-more">Saiba mais →</a>
+                </article>
             </div>
-        </section>
-
-        <section id="why-automate" style="background-color: #f8f9fa; padding: 80px 0;">
-            <div class="container">
-                <h2 style="text-align: center;">Por que automatizar? Porque seu tempo é precioso.</h2>
-                <p class="section-subtitle" style="text-align: center;">A tecnologia deve ser uma aliada para facilitar sua vida, não para complicar.</p>
-                <div class="why-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
-                    <div class="why-card" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                        <h4>✓ Nunca mais perca um cliente</h4>
-                        <p>Responda instantaneamente e garanta que cada pessoa que entra em contato seja bem atendida, mesmo fora do horário comercial.</p>
-                    </div>
-                    <div class="why-card" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                        <h4>✓ Mais profissionalismo</h4>
-                        <p>Padronize suas boas-vindas e organize as conversas. Transmita uma imagem de empresa organizada e eficiente, não importa o seu tamanho.</p>
-                    </div>
-                    <div class="why-card" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                        <h4>✓ Mais tempo para o que importa</h4>
-                        <p>Deixe que a automação cuide das tarefas repetitivas. Assim, você e sua equipe podem focar na estratégia e em atender casos complexos.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="insights">
-            <div class="container">
-                <h2>Descubra o Poder da Automação</h2>
-                <p class="section-subtitle">Conteúdos e artigos para você entender como a tecnologia pode ser sua maior parceira de negócios.</p>
-                <div class="blog-grid" style="margin-top: 50px;">
-                    <div class="blog-post-card" style="background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-                        <h4>Reportagem: Pequenos negócios crescem 30% com automação simples no WhatsApp</h4>
-                        <p>Veja casos reais de empresas como a sua que transformaram o atendimento e aumentaram as vendas com passos simples.</p>
-                        <a href="#" style="color: #007bff; text-decoration: none; font-weight: 600;">Ler mais →</a>
-                    </div>
-                    <div class="blog-post-card" style="background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-                        <h4>Guia: 5 tarefas que o WhatsApp pode fazer por você enquanto você dorme</h4>
-                        <p>Desde agendar horários até responder perguntas sobre preços. Aprenda o que você pode automatizar hoje mesmo.</p>
-                        <a href="#" style="color: #007bff; text-decoration: none; font-weight: 600;">Ler mais →</a>
-                    </div>
-                    <div class="blog-post-card" style="background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-                        <h4>Mito ou Verdade: "Automação é só para grandes empresas?"</h4>
-                        <p>Quebramos os principais mitos e mostramos por que a automação é, na verdade, a ferramenta mais democrática para o pequeno empreendedor.</p>
-                        <a href="#" style="color: #007bff; text-decoration: none; font-weight: 600;">Ler mais →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container contact-content">
-                <h2>Pronto para dar o próximo passo?</h2>
-                <p>Sem compromisso. Vamos conversar sobre o seu negócio e descobrir juntos como a automação pode te ajudar. Nossa consultoria é gratuita.</p>
-                <a href="https://wa.me/551151880952" target="_blank" class="cta-button whatsapp-button">
-                    <img src="whatsapp-logo.png" alt="WhatsApp Logo">
-                    Conversar com um Especialista
-                </a>
-            </div>
-        </section>
+        </div>
     </main>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Pronto para dar o próximo passo?</h2>
+            <p>Sem compromisso. Vamos conversar sobre o seu negócio e descobrir juntos como a automação pode te ajudar. Nossa consultoria é gratuita.</p>
+            <a href="https://wa.me/551151880952" target="_blank" class="whatsapp-button">
+                <img src="whatsapp-logo.png" alt="WhatsApp Logo">
+                Conversar com um Especialista
+            </a>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 two-jhey. Todos os direitos reservados. Feito para empoderar negócios.</p>
+            <p>&copy; 2025 two-jhey. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
