@@ -3,176 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>two-jhey - Blog sobre Automação no WhatsApp</title>
+    <title>two-jhey - Automação Inteligente para WhatsApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS BÁSICO E RESET */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        /* CSS BÁSICO */
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: #f9f9f9; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; }
+
+        /* HEADER */
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 40px; }
+        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { color: #555; font-weight: 500; font-size: 16px; }
+        .cta-button { background-color: #25D366; color: white; padding: 10px 20px; border-radius: 20px; font-weight: 600; }
+
+        /* NOVA SEÇÃO DE INTRODUÇÃO */
+        .intro-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .intro-section h1 {
+            font-size: 36px;
+            line-height: 1.3;
+            color: #1c1e21;
         }
-        a {
-            text-decoration: none;
+        .intro-section p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 20px auto 0 auto;
+        }
+
+        /* NOVA SEÇÃO DE CARDS DE NAVEGAÇÃO */
+        .nav-cards-section {
+            padding: 60px 20px;
+        }
+        .nav-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .nav-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .nav-card h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #111;
+        }
+        .nav-card p {
+            color: #555;
+            flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
+        }
+        .card-button {
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
             color: #007bff;
         }
-
-        /* HEADER E NAVEGAÇÃO */
-        header {
-            background-color: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo img {
-            height: 40px;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-links a {
-            color: #555;
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover {
-            color: #000;
-        }
-        .cta-button {
-            background-color: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            transition: background-color 0.2s;
-        }
-        .cta-button:hover {
-            background-color: #128C7E;
-        }
-
-        /* CORPO PRINCIPAL - BLOG */
-        main {
-            padding: 40px 0;
-        }
-        .blog-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .blog-header h1 {
-            font-size: 42px;
-            color: #1c1e21;
-            margin: 0;
-        }
-
-        /* LISTA DE POSTS */
-        .post-list .post-item {
-            background-color: #fff;
-            padding: 30px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .post-list .post-item:last-child {
-            border-bottom: none;
-        }
-        .post-date {
-            font-size: 14px;
-            color: #888;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-        }
-        .post-title {
-            margin: 0 0 15px 0;
-        }
-        .post-title a {
-            font-size: 28px;
-            color: #111;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        .post-title a:hover {
-            text-decoration: underline;
-        }
-        .post-excerpt {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-            margin: 0 0 20px 0;
-        }
-        .read-more {
-            font-weight: 600;
-            display: inline-block;
-        }
         
-        /* SEÇÃO DE CONTATO */
-        #contact {
-            background-color: #ece5dd;
-            padding: 60px 0;
-            text-align: center;
-        }
-        #contact h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-        #contact p {
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-        .whatsapp-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: #25D366;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: transform 0.2s;
-        }
-        .whatsapp-button:hover {
-            transform: scale(1.05);
-        }
-        .whatsapp-button img {
-            height: 24px;
-        }
-
         /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f0f0f0;
-            color: #777;
-            font-size: 14px;
-        }
+        footer { text-align: center; padding: 20px 0; background-color: #f0f0f0; color: #777; font-size: 14px; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="Logo two-jhey">
-            </a>
+            <a href="index.html" class="logo"><img src="logo.png" alt="Logo two-jhey"></a>
             <ul class="nav-links">
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="ajuda.html">Central de Ajuda</a></li>
@@ -185,54 +97,39 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="blog-header">
-                <h1>Blog da two-jhey</h1>
+        <section class="intro-section">
+            <div class="container">
+                <h1>Uma revolução silenciosa está acontecendo.</h1>
+                <p>O mercado está mudando. Empresas continuam as mesmas, mas as mais inteligentes estão se tornando exponencialmente mais produtivas. Elas não trocaram suas equipes, elas deram a elas as ferramentas certas. A automação e a inteligência artificial não vieram para substituir o potencial humano, mas sim para liberá-lo das tarefas repetitivas, permitindo foco total na estratégia, na criatividade e no cliente.</p>
             </div>
+        </section>
 
-            <div class="post-list">
-                <article class="post-item">
-                    <p class="post-date">August 14, 2025</p>
-                    <h2 class="post-title"><a href="#">Ligações no WhatsApp: novos jeitos de planejar e participar</a></h2>
-                    <p class="post-excerpt">Estamos anunciando novos recursos no WhatsApp que farão as ligações em grupo serem mais fáceis de planejar e mais interativas.</p>
-                    <a href="#" class="read-more">Saiba mais →</a>
-                </article>
+        <section class="nav-cards-section">
+            <div class="container">
+                <div class="nav-cards-container">
+                    
+                    <div class="nav-card">
+                        <h2>Nosso Blog</h2>
+                        <p>Artigos, guias e insights sobre o mundo da automação no WhatsApp para pequenos e grandes negócios.</p>
+                        <a href="blog.html" class="card-button">Ver publicações →</a>
+                    </div>
+                    
+                    <div class="nav-card">
+                        <h2>Recursos</h2>
+                        <p>Descubra as ferramentas que nossa plataforma oferece para transformar seu atendimento e suas vendas.</p>
+                        <a href="recursos.html" class="card-button">Conhecer recursos →</a>
+                    </div>
 
-                <article class="post-item">
-                    <p class="post-date">June 25, 2025</p>
-                    <h2 class="post-title"><a href="#">Resumos de conversas com IA para você não perder nada</a></h2>
-                    <p class="post-excerpt">Conheça os Resumos de Mensagens, uma nova opção que usa IA para resumir de forma privada e rápida as mensagens não lidas em uma conversa.</p>
-                    <a href="#" class="read-more">Saiba mais →</a>
-                </article>
-
-                <article class="post-item">
-                    <p class="post-date">June 16, 2025</p>
-                    <h2 class="post-title"><a href="#">Ajudamos você a encontrar mais canais e empresas no WhatsApp</a></h2>
-                    <p class="post-excerpt">Estamos lançando hoje novos recursos para a aba Atualizações, onde você encontra os canais e o status de forma mais intuitiva.</p>
-                    <a href="#" class="read-more">Saiba mais →</a>
-                </article>
-
-                <article class="post-item">
-                    <p class="post-date">June 12, 2025</p>
-                    <h2 class="post-title"><a href="#">Resumo dos novos recursos: atualizações nas figurinhas, ligações e mais</a></h2>
-                    <p class="post-excerpt">Confira este resumo de alguns dos novos recursos, ferramentas e configurações que podem ter passado despercebidos por você nas abas Conversas, Ligações e Atualizações.</p>
-                    <a href="#" class="read-more">Saiba mais →</a>
-                </article>
+                    <div class="nav-card">
+                        <h2>Para Empresas</h2>
+                        <p>Veja como nossas soluções se adaptam perfeitamente a equipes de vendas, suporte e pequenos negócios.</p>
+                        <a href="para-empresas.html" class="card-button">Ver soluções →</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Pronto para dar o próximo passo?</h2>
-            <p>Sem compromisso. Vamos conversar sobre o seu negócio e descobrir juntos como a automação pode te ajudar. Nossa consultoria é gratuita.</p>
-            <a href="https://wa.me/551151880952" target="_blank" class="whatsapp-button">
-                <img src="whatsapp-logo.png" alt="WhatsApp Logo">
-                Conversar com um Especialista
-            </a>
-        </div>
-    </section>
-
+    
     <footer>
         <div class="container">
             <p>&copy; 2025 two-jhey. Todos os direitos reservados.</p>
