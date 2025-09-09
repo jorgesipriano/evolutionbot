@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itaú, Demissões e Automação Inteligente - two-jhey</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>two-jhey Blog</h1>
+  </header>
+
+  <main>
+    <article>
+      <h2>Itaú demite funcionários em home office: o que a automação tem a ver com isso?</h2>
+      <p><em>Publicado em 03 de setembro de 2025</em></p>
+
+      <p>Nesta semana, o Itaú realizou <strong>cerca de mil demissões</strong> de colaboradores que atuavam em regime remoto ou híbrido.  
+      Segundo a instituição, foram encontradas inconsistências entre as atividades registradas nas plataformas e os pontos de jornada dos trabalhadores.</p>
+
+      <p>Esse episódio reacende a discussão sobre <strong>monitoramento, produtividade e automação</strong> no ambiente corporativo. Afinal, até que ponto a tecnologia deve ser usada para controlar a rotina dos funcionários?</p>
+
+      <h3>O papel da automação inteligente</h3>
+      <p>Automação não precisa ser sinônimo de vigilância excessiva.  
+      Pelo contrário, quando bem aplicada, ela ajuda a:</p>
+      <ul>
+        <li>Reduzir tarefas repetitivas e liberar tempo para atividades estratégicas;</li>
+        <li>Gerar relatórios de produtividade com dados reais e transparentes;</li>
+        <li>Facilitar a comunicação entre equipes remotas;</li>
+        <li>Construir um ambiente de confiança, e não de medo.</li>
+      </ul>
+
+      <h3>Produtividade além do ponto eletrônico</h3>
+      <p>Em vez de medir apenas cliques e tempo online, empresas que investem em automação inteligente conseguem avaliar resultados de forma mais justa.  
+      Isso significa acompanhar entregas, qualidade do atendimento e impacto real do trabalho.</p>
+
+      <h3>O que aprendemos com o caso Itaú?</h3>
+      <p>A grande lição é que <strong>tecnologia sem estratégia pode gerar ruído</strong>.  
+      Demissões baseadas apenas em relatórios de “inatividade” podem desconsiderar contextos importantes: problemas técnicos, sobrecarga de trabalho e até questões de saúde.</p>
+
+      <p>No fim, a verdadeira transformação digital não está apenas em adotar ferramentas, mas em <strong>usar a automação para fortalecer relações de confiança</strong> dentro das organizações.</p>
+
+      <p><strong>Quer conhecer soluções de automação que aumentam a produtividade sem perder o fator humano?</strong> Continue acompanhando o blog da two-jhey 😉</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 two-jhey. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
